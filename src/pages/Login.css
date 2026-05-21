@@ -1,0 +1,11 @@
+.auth-page{
+  max-width:420px;
+  margin:80px auto;
+  padding:24px;
+}
+.auth-form{display:flex;flex-direction:column;gap:10px}
+.auth-form input{padding:8px;border-radius:6px;border:1px solid rgba(0,0,0,0.1)}
+.auth-error{color:#c53030;padding:6px 0}
+.auth-footer{margin-top:12px;font-size:14px}
+.btn.primary{background:#5b4fff;color:white;padding:8px 12px;border-radius:6px;border:none}
+.logout-btn{margin-left:12px;padding:6px 8px;border-radius:6px}

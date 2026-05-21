@@ -2,8 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, Users, Calendar, Award, BookOpen, Image, MessageSquare, X } from 'lucide-react';
 import './Sidebar.css';
+import { useAuth } from '../../auth/AuthContext';
 
 const Sidebar = ({ isOpen, closeMenu }) => {
+  const { current } = useAuth();
+
   const navItems = [
     { name: 'Dashboard', path: '/', icon: <LayoutDashboard size={20} /> },
     { name: 'Discover', path: '/discover', icon: <Users size={20} /> },
@@ -13,6 +16,10 @@ const Sidebar = ({ isOpen, closeMenu }) => {
     { name: 'Gallery', path: '/gallery', icon: <Image size={20} /> },
     { name: 'Forums', path: '/forums', icon: <MessageSquare size={20} /> },
   ];
+
+  if (current && current.role === 'hr') {
+    navItems.push({ name: 'HR Panel', path: '/hr', icon: <Users size={20} /> });
+  }
 
   return (
     <aside className={`sidebar glass-panel ${isOpen ? 'mobile-open' : ''}`}>

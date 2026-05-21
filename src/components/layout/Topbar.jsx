@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Search, Bell, Sun, Moon, Menu } from 'lucide-react';
-import { currentUser, notifications } from '../../data/mockData';
+import { notifications } from '../../data/mockData';
+import { useAuth } from '../../auth/AuthContext';
 import './Topbar.css';
 
 const Topbar = ({ theme, toggleTheme, toggleMenu }) => {
@@ -18,6 +19,7 @@ const Topbar = ({ theme, toggleTheme, toggleMenu }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const { current, logout } = useAuth();
   const unreadCount = notifications.filter(n => n.unread).length;
 
   return (
@@ -73,11 +75,20 @@ const Topbar = ({ theme, toggleTheme, toggleMenu }) => {
         </div>
 
         <div className="user-profile">
-          <div className="user-info">
-            <span className="user-name">{currentUser.name}</span>
-            <span className="user-role">{currentUser.role}</span>
-          </div>
-          <img src={currentUser.avatar} alt="User avatar" className="user-avatar" />
+          {current ? (
+            <>
+              <div className="user-info">
+                <span className="user-name">{current.name}</span>
+                <span className="user-role">{current.role}</span>
+              </div>
+              <img src={current.avatar} alt="User avatar" className="user-avatar" />
+              <button className="btn logout-btn" onClick={() => logout()}>Sign out</button>
+            </>
+          ) : (
+            <div className="user-info">
+              <span className="user-name">Guest</span>
+            </div>
+          )}
         </div>
       </div>
     </header>
