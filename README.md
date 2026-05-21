@@ -1,131 +1,122 @@
 # 🌐 Corporate Intranet Platform
 
-A **dynamic, interactive, and modern corporate intranet web application** built using **React.js (JavaScript)** to enhance internal communication, engagement, and organizational visibility.
+A **dynamic, interactive corporate intranet web application** built with **React.js (JavaScript)** to enhance internal communication, employee engagement, and organizational transparency.
 
-This platform serves as a **centralized engagement layer** for employees across departments, helping break silos while maintaining controlled visibility through modular design.
-
----
-
-## 🚀 Overview
-
-The Corporate Intranet is designed to:
-
-* Improve **organizational transparency**
-* Promote **employee engagement & collaboration**
-* Highlight **company vision, achievements, and updates**
-* Build a **strong recognition and celebration culture**
-* Provide a **lightweight knowledge-sharing ecosystem**
-
-> ⚠️ Note: This platform focuses on engagement and communication — not HR transactional systems like attendance or payroll.
+This platform acts as a **centralized engagement and communication layer** across departments, helping organizations **break silos, celebrate achievements, and align teams**—without focusing on traditional HR operations like attendance or payroll.
 
 ---
 
-## 🧩 Key Features
+## 🚀 Project Vision
 
-### 📊 1. Smart Dashboard (Core Experience)
+The goal of this platform is to:
 
-* Personalized feed based on user role & department
-* Highlights:
+* Provide a **single source of truth** for company-wide communication
+* Improve **visibility across teams and departments**
+* Strengthen **organizational culture and engagement**
+* Encourage **collaboration and recognition**
+* Serve as a **foundation layer** for future enterprise integrations
+
+---
+
+## ✨ Key Features
+
+### 📊 Smart Dashboard
+
+* Personalized and prioritized content feed
+* Displays:
 
   * Leadership vision & updates
   * Announcements & project wins
-  * Recognitions & celebrations
+  * Recognitions
   * Upcoming events
-* Prioritized content layout for **clarity over clutter**
+* Designed for **clarity without overwhelming users**
 
 ---
 
-### 📢 2. Announcements & Leadership Communication
+### 🔐 Authentication System (HR & Employee)
 
-* Company-wide and department-specific posts
+* Role-based login system:
+
+  * 👨‍💼 HR/Admin
+  * 👨‍💻 Employees
+* Features:
+
+  * Login with email & password
+  * New user registration
+  * Session persistence using `localStorage`
+* HR account is **predefined and restricted from registration**
+
+---
+
+### 📢 Announcements & Leadership Communication
+
+* Global & department-specific posts
 * Categories:
 
   * Vision
   * Project Wins
-  * General Announcements
-* Interactive:
+  * Announcements
+* Engagement:
 
-  * 👍 Likes
-  * 💬 Comments
-* Timestamp-based activity tracking
-
----
-
-### 🏆 3. Recognition & Appreciation System
-
-* Peer-to-peer recognition
-* Highlight achievements publicly
-* Encourages positive culture
-
-Features:
-
-* Recognition messages
-* Timeline-based display
-* Contribution visibility
+  * Likes 👍
+  * Comments 💬
 
 ---
 
-### 🎉 4. Engagement & Culture Layer
+### 🏆 Recognition & Appreciation
 
-* New joinee welcome posts
-* Celebration announcements (festivals, milestones)
-* Employee experience sharing
-* Interactive replies & discussions
+* Peer-to-peer recognition system
+* Highlights employee contributions
+* Builds a **positive work culture**
 
 ---
 
-### 🧑‍🤝‍🧑 5. Employee Directory (Collaboration Layer)
+### 🎉 Engagement & Culture
 
-* Discover colleagues across departments
+* Welcome posts for new joiners
+* Celebration posts (festivals, milestones)
+* Interactive discussions & replies
+
+---
+
+### 🧑‍🤝‍🧑 Employee Directory
+
+* Explore employees across departments
 * View:
 
   * Roles
   * Departments
-  * Profiles & bios
-* Helps **break organizational silos**
+  * Profiles & avatars
+* Encourages **cross-team collaboration**
 
 ---
 
-### 🏢 6. Department & Vertical Visibility
+### 🏢 Department Visibility
 
-* Each department has:
+* Each department includes:
 
-  * Identity
+  * Name
   * Description
-  * Associated members
-* Enables cross-functional awareness
+  * Members
+* Helps understand organizational structure
 
 ---
 
-### 🗓️ 7. Events & Engagement Calendar
+### 🗓️ Events & Calendar
 
-* Company-wide and department-level events
-* Visual representation of:
+* Company-wide and department events
+* Examples:
 
   * Townhalls
-  * Team syncs
+  * Team meetings
   * Cultural celebrations
-* Attendance tracking (mock-based)
+* Engagement-based participation
 
 ---
 
-### 🧠 8. Knowledge Hub (Pluggable)
+### 🔔 Notifications
 
-* Designed for:
-
-  * Policies
-  * Handbooks
-  * Documentation
-* Extendable into:
-
-  * Forum-based discussions
-  * Two-way knowledge exchange
-
----
-
-### 🔔 9. Notification System
-
-* Real-time-like notifications (mock)
+* Real-time-like updates (mock-based)
 * Tracks:
 
   * Recognitions
@@ -135,25 +126,37 @@ Features:
 
 ---
 
-### 🎮 10. Gamification (Lightweight)
+### 🎮 Gamification
 
-* Points-based system
-* Leaderboard-ready architecture
-* Encourages participation and ownership
-
----
-
-### 🔐 11. Multi-Tenancy & Visibility Control (Conceptual)
-
-* Department-level isolation
-* Global vs restricted content visibility
-* Designed for scalability into real enterprise systems
+* Points-based engagement system
+* Encourages participation
+* Leaderboard-ready structure
 
 ---
 
-## 📱 Mobile APK (Limited Features)
+### 🧠 Knowledge Hub (Extensible)
 
-A lightweight mobile version can support:
+* Designed for:
+
+  * Policies
+  * Handbooks
+  * Documents
+* Can evolve into:
+
+  * Forum system
+  * Two-way knowledge sharing
+
+---
+
+### 🔐 Multi-Tenancy (Conceptual)
+
+* Department-based visibility control
+* Global vs restricted access design
+* Scalable architecture for enterprise use
+
+---
+
+## 📱 Mobile APK (Planned / Limited)
 
 * View announcements
 * View recognitions
@@ -165,19 +168,38 @@ A lightweight mobile version can support:
 ## 🏗️ Tech Stack
 
 * **Frontend:** React.js (JavaScript)
-* **State/Data:** Mock Data (Static JSON)
-* **UI Approach:** Component-based modular architecture
-* **Design Philosophy:** Simple, clean, and engagement-focused UX
+* **State Management:** React Context API
+* **Authentication:** Custom Auth using Context + LocalStorage
+* **Data Source:** Mock Data (Static JSON)
+* **UI Philosophy:** Minimal, modern, engagement-focused
 
 ---
 
-## 🧪 Mock Data Usage
+## 📂 Project Structure
 
-This project uses **mock data** to simulate a real corporate environment.
+```bash
+src/
+│── components/
+│── pages/
+│── auth/
+│   └── AuthContext.js
+│── data/
+│   └── mockData.js
+│── App.jsx
+│── main.jsx
+│── App.css
+│── index.css
+```
+
+---
+
+## 🧪 Mock Data
+
+This project uses mock data to simulate a real corporate environment.
 
 ### Includes:
 
-* 👤 Users & Current User
+* 👤 Users
 * 🏢 Departments
 * 📢 Announcements
 * 🏆 Recognitions
@@ -198,9 +220,52 @@ export const currentUser = {
 
 ---
 
+## 🔐 Authentication Details
+
+### 👨‍💼 Default HR Login
+
+```bash
+Email: hr@corporate.com
+Password: hrpassword
+```
+
+> ⚠️ HR email cannot be used for registration.
+
+---
+
+### 👨‍💻 Sample Employee Login
+
+```bash
+Email: alex@corporate.com
+Password: password123
+```
+
+---
+
+### 🆕 Register New User
+
+* Enter:
+
+  * Name
+  * Email
+  * Password
+* Automatically logged in after registration
+* Role assigned: `employee`
+
+---
+
+### ⚙️ Auth Features
+
+* LocalStorage persistence
+* Unique email validation
+* Role-based access (`hr` vs `employee`)
+* Logout support
+
+---
+
 ## ▶️ How to Run the Project
 
-### 1. Clone the Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/shuvomdhar/Employee-Management.git
@@ -235,74 +300,74 @@ http://localhost:5173
 
 ## 🧑‍💻 How to Use the Application
 
-### 👋 Login (Mock)
+### 🔑 Step 1: Login / Register
 
-* The app assumes a default logged-in user (`currentUser`)
+* Login using HR or employee credentials
+* Or register as a new employee
 
 ---
 
-### 🏠 Dashboard
+### 🏠 Step 2: Explore Dashboard
 
 * View:
 
   * Announcements
   * Recognitions
   * Events
-* Interact via likes/comments (UI-based)
+* Interact via likes/comments
 
 ---
 
-### 🔍 Explore Employees
+### 👥 Step 3: Discover Employees
 
-* Navigate to directory
-* View profiles and departments
-
----
-
-### 🏆 Recognize Peers
-
-* Browse recognition feed
-* Add new recognitions (if UI implemented)
+* Browse employee directory
+* Understand roles and departments
 
 ---
 
-### 📅 Check Events
+### 🏆 Step 4: Engage & Recognize
 
-* Stay updated with upcoming meetings & celebrations
-
----
-
-### 🔔 Notifications
-
-* View recent activity updates
-* Track unread alerts
+* Appreciate peers
+* View recognition feed
 
 ---
 
-## 🎯 Design Principles Followed
+### 📅 Step 5: Track Events
 
-* ✅ **Simple yet powerful UX**
-* ✅ **Content prioritization over overload**
-* ✅ **Modular and scalable architecture**
-* ✅ **Engagement-driven interactions**
-* ✅ **Cross-department visibility with control**
+* Stay updated with meetings & celebrations
+
+---
+
+### 🔔 Step 6: Check Notifications
+
+* Monitor updates and reminders
+
+---
+
+## 🎯 Design Principles
+
+* ✅ Simple yet powerful UX
+* ✅ Clean and minimal UI
+* ✅ Content prioritization
+* ✅ Modular architecture
+* ✅ Engagement-first approach
 
 ---
 
 ## 🔮 Future Enhancements
 
-* Backend integration (Node.js / Firebase / Supabase)
-* Real authentication system
+* Backend integration (Node.js / Firebase)
+* Secure authentication (JWT, OAuth)
 * Role-based access control (RBAC)
 * Real-time updates (WebSockets)
-* Full mobile app (React Native / Flutter)
-* AI-based content prioritization
+* Full mobile app (React Native)
+* AI-driven content prioritization
 
 ---
 
 ## 🤝 Contribution
 
-Feel free to fork this project and enhance it further.
+Contributions are welcome! Feel free to fork and enhance the project.
 
 ---
 
@@ -315,9 +380,9 @@ This project is for educational and demonstration purposes.
 ## 👨‍💻 Author
 
 **Shuvom Dhar**
-B.Tech CSE | Software Engineer
-Passionate about building impactful, real-world applications
+B.Tech CSE | Aspiring Software Engineer
+Passionate about building impactful real-world applications
 
 ---
 
-⭐ If you like this project, consider giving it a star!
+⭐ If you found this useful, consider giving it a star!
