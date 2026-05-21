@@ -1,0 +1,272 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--text-secondary);
+}
+
+/* About Hero */
+.about-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--surface-color), var(--primary-light));
+  border: 1px solid var(--primary-accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 50%;
+  height: 200%;
+  background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 70%;
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+}
+
+.about-hero-visual {
+  position: relative;
+  z-index: 1;
+  color: var(--primary-accent);
+  opacity: 0.85;
+  filter: drop-shadow(0 0 20px var(--primary-light));
+}
+
+.about-hero-icon {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* About Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+}
+
+.strategy-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.strategy-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.strategy-p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Value Items */
+.value-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.value-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.value-icon {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.value-item h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.value-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Roadmap Timeline */
+.roadmap-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.timeline-step {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.timeline-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 2.25rem;
+  left: 2rem;
+  bottom: -1.25rem;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.step-badge {
+  flex-shrink: 0;
+  width: 4.2rem;
+  height: 2.2rem;
+  border-radius: var(--radius-sm);
+  background: var(--primary-light);
+  border: 1px solid var(--primary-accent);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.step-content h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.step-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Leadership Quote Section */
+.leadership-quote {
+  padding: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--primary-accent);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+  margin-top: -1.5rem;
+}
+
+.quote-content {
+  flex: 1;
+}
+
+.quote-text {
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.quote-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-author strong {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.quote-author span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+  .about-hero {
+    padding: 2rem;
+  }
+  .about-hero-content {
+    max-width: 100%;
+  }
+  .about-hero-visual {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .strategy-card {
+    padding: 1.5rem;
+  }
+  .leadership-quote {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  .quote-icon {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+}
